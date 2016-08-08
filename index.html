@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	<div class="box">
+		<div class="btn">开始</div>
+		<div class="btn1">暂停</div>
+		<div class="neirong">10</div>
+	</div>
+</body>
+<script src="js/game.js"></script>
+<script>
+	var box =document.getElementsByClassName('box')[0];
+	var btn=document.getElementsByClassName("btn")[0];
+	var btn1=document.getElementsByClassName("btn1")[0];
+	var neirong=document.getElementsByClassName("neirong")[0];
+	var kaishi=new game(box);
+	btn.onclick=function(){
+		kaishi.play();
+		kaishi.key();
+	}
+	btn1.onclick=function(){
+		kaishi.tingzhi();
+	}
+    setInterval(function(){
+    	neirong.innerHTML=kaishi.score;
+    },100)
+    setInterval(function(){
+    	neirong.innerHTML=kaishi.score;
+    },100)
+</script>
+</html>
